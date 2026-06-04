@@ -1,0 +1,8 @@
+{
+  "name": "purplle-tech-challenge-2026",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p public && cp index.html public/index.html && cp -R demo docs submission data README.md DESIGN.md CHOICES.md SUBMISSION.md public/"
+  }
+}
