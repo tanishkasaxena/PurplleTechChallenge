@@ -1,0 +1,25 @@
+# Planned runtime composition for the implementation phase.
+# The referenced Dockerfiles should be added once the FastAPI and Streamlit
+# modules exist, as described in docker/README.md and docs/roadmap.md.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    env_file:
+      - .env.example
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dashboard
+    env_file:
+      - .env.example
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api

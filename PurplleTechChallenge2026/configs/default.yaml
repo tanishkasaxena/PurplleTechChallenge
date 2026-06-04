@@ -1,0 +1,27 @@
+app:
+  name: purplle-offline-analytics
+  environment: local
+
+database:
+  url: sqlite:///./purplle_analytics.db
+
+video:
+  processing_fps: 5
+  min_detection_confidence: 0.35
+  track_lost_tolerance_ms: 2000
+
+events:
+  dwell_threshold_ms: 10000
+  queue_join_threshold_ms: 5000
+  reentry_window_ms: 1800000
+  conversion_window_ms: 300000
+
+models:
+  detector: yolov8
+  tracker: bytetrack
+  reid: osnet
+
+logging:
+  format: json
+  level: INFO
+

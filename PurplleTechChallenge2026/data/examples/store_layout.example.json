@@ -1,0 +1,47 @@
+{
+  "store_id": "store_001",
+  "open_hours": {
+    "open": "10:00",
+    "close": "22:00"
+  },
+  "cameras": [
+    {
+      "camera_id": "entry_cam_001",
+      "camera_type": "entry",
+      "coverage_zones": ["entry_zone", "exit_zone"]
+    },
+    {
+      "camera_id": "floor_cam_001",
+      "camera_type": "main_floor",
+      "coverage_zones": ["skincare_zone", "makeup_zone"]
+    },
+    {
+      "camera_id": "billing_cam_001",
+      "camera_type": "billing",
+      "coverage_zones": ["billing_zone", "queue_zone"]
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "entry_zone",
+      "zone_type": "entry",
+      "polygon": [[100, 100], [400, 100], [400, 300], [100, 300]]
+    },
+    {
+      "zone_id": "exit_zone",
+      "zone_type": "exit",
+      "polygon": [[100, 300], [400, 300], [400, 500], [100, 500]]
+    },
+    {
+      "zone_id": "billing_zone",
+      "zone_type": "billing",
+      "polygon": [[1200, 200], [1800, 200], [1800, 800], [1200, 800]]
+    },
+    {
+      "zone_id": "queue_zone",
+      "zone_type": "queue",
+      "polygon": [[800, 200], [1200, 200], [1200, 800], [800, 800]]
+    }
+  ]
+}
+
